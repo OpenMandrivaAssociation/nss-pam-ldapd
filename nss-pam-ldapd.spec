@@ -9,6 +9,7 @@ Source0:	http://arthurdejong.org/nss-ldapd/%{name}-%{version}.tar.gz
 Source2:	nslcd.init
 BuildRequires:	openldap-devel
 BuildRequires:	krb5-devel
+BuildRequires:	pam-devel
 BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
