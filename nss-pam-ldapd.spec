@@ -2,7 +2,7 @@ Name:		nss-pam-ldapd
 Version:	0.7.1
 Release:	%mkrel 1
 Summary:	An nsswitch module which uses directory servers
-Group:		System Environment/Base
+Group:		System/Libraries
 License:	LGPLv2+
 URL:		http://arthurdejong.org/nss-ldapd/
 Source0:	http://arthurdejong.org/nss-ldapd/%{name}-%{version}.tar.gz
