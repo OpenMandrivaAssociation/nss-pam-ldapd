@@ -1,5 +1,5 @@
 Name:		nss-pam-ldapd
-Version:	0.7.12
+Version:	0.7.13
 Release:	%mkrel 1
 Summary:	An nsswitch module which uses directory servers
 Group:		System/Libraries
