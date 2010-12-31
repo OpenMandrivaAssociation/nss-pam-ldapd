@@ -21,7 +21,7 @@ nsswitch module.
 %setup -q
 
 %build
-%configure2_5x --libdir=/%{_lib}
+%configure2_5x --libdir=/%{_lib} --with-pam-seclib-dir=/%{_lib}/security
 %make
 
 %install
