@@ -20,7 +20,7 @@ nsswitch module.
 
 %prep
 %setup -q
-%patch -p 0
+%patch0 -p 0
 
 %build
 %configure2_5x --libdir=/%{_lib} --with-pam-seclib-dir=/%{_lib}/security
