@@ -1,12 +1,13 @@
 Name:		nss-pam-ldapd
 Version:	0.8.0
-Release:	%mkrel 1
+Release:	%mkrel 2
 Summary:	An nsswitch module which uses directory servers
 Group:		System/Libraries
 License:	LGPLv2+
 URL:		http://arthurdejong.org/nss-ldapd/
 Source0:	http://arthurdejong.org/nss-ldapd/%{name}-%{version}.tar.gz
 Source2:	nslcd.init
+Patch0:     http://arthurdejong.org/nss-pam-ldapd/nss-pam-ldapd-0.8.0-authentication-bypass-fix.patch
 BuildRequires:	openldap-devel
 BuildRequires:	krb5-devel
 BuildRequires:	pam-devel
@@ -19,6 +20,7 @@ nsswitch module.
 
 %prep
 %setup -q
+%patch -p 0
 
 %build
 %configure2_5x --libdir=/%{_lib} --with-pam-seclib-dir=/%{_lib}/security
