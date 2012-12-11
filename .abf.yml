@@ -1,3 +1,2 @@
 sources:
-  "nslcd.init:"	ffbf0c7c85b2b4c6b3e8b23839a8728a6fd8234b
-  "nss-pam-ldapd-0.8.3.tar.gz:"	cdc5d53b7841229476db7a787156ffa6b5cbec61
+  "nss-pam-ldapd-0.8.3.tar.gz": cdc5d53b7841229476db7a787156ffa6b5cbec61
