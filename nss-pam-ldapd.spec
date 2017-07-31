@@ -1,15 +1,17 @@
 Name:		nss-pam-ldapd
-Version:	0.8.3
-Release:	2
+Version:	0.9.8
+Release:	1
 Summary:	An nsswitch module which uses directory servers
 Group:		System/Libraries
 License:	LGPLv2+
 URL:		http://arthurdejong.org/nss-ldapd/
 Source0:	http://arthurdejong.org/nss-ldapd/%{name}-%{version}.tar.gz
 Source2:	nslcd.init
+Source3:	nss-pam-ldapd.rpmlintrc
 BuildRequires:	openldap-devel
 BuildRequires:	krb5-devel
 BuildRequires:	pam-devel
+Requires:	rpm-helper
 BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
@@ -21,7 +23,7 @@ nsswitch module.
 %setup -q
 
 %build
-%configure2_5x --libdir=/%{_lib} --with-pam-seclib-dir=/%{_lib}/security
+%configure --libdir=/%{_lib} --with-pam-seclib-dir=/%{_lib}/security
 %make
 
 %install
@@ -53,15 +55,18 @@ rm -rf %{buildroot}
 %files
 %defattr(-,root,root)
 %doc AUTHORS ChangeLog COPYING HACKING NEWS README TODO
+%{_bindir}/chsh.ldap
+%{_bindir}/getent.ldap
 %{_sbindir}/*
 /%{_lib}/*.so.*
 /%{_lib}/security/*.so
+%{_datadir}/nslcd-utils/__pycache__/*
+%{_datadir}/nslcd-utils/*.py
 %{_mandir}/*/*
 %config(noreplace) %{_sysconfdir}/nss-ldapd.conf
 %config(noreplace) %{_sysconfdir}/nslcd.conf
 %{_initrddir}/nslcd
 %attr(-,nslcd,root) %{_localstatedir}/run/nslcd
-
 
 
 %changelog
