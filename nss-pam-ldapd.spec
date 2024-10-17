@@ -4,7 +4,7 @@ Release:	1
 Summary:	An nsswitch module which uses directory servers
 Group:		System/Libraries
 License:	LGPLv2+
-URL:		http://arthurdejong.org/nss-ldapd/
+URL:		https://arthurdejong.org/nss-ldapd/
 Source0:	http://arthurdejong.org/nss-ldapd/%{name}-%{version}.tar.gz
 Source2:	nslcd.init
 BuildRequires:	pkgconfig(ldap)
